@@ -1,0 +1,32 @@
+<div class="form">
+  <div class="formulario">
+    <h1>Formulario de persona</h1>
+    <p>
+      <label>Nombre</label>
+      <input type="text" placeholder="Escribe tu nombre" [(ngModel)]="nombre">
+    </p>
+    <p>
+      <label>edad</label>
+      <input type="number" placeholder="Edad" [(ngModel)]="edad">
+    </p>
+    <p>
+      <label>Sexo</label>
+      <input type="radio" name="sexo" (click)="sexo = HOMBRE" checked> H (Hombre)
+      <input type="radio" name="sexo" (click)="sexo = MUJER"> M (Mujer)
+    </p>
+    <p>
+      <label>Peso</label>
+      <input type="number" placeholder="Edad" [(ngModel)]="peso">
+    </p>
+    <p>
+      <label>Altura</label>
+      <input type="number" placeholder="Edad" [(ngModel)]="altura">
+    </p>
+    <button type="button" (click)="sendData()">
+      <p>Enviar</p>
+    </button>
+    <p>
+      {{ message | json }}
+    </p>
+  </div>
+</div>
